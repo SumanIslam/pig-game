@@ -17,21 +17,39 @@ const btnHold = document.querySelector('.btn--hold');
 
 let activeSign = document.querySelectorAll('.active--sign');
 
-// starting conditions
-totalScore0.textContent = 0;
-totalScore1.textContent = 0;
-showingDice.classList.add('hidden');
+//variable declaring
+let scores,activePlayer,current,playing;
 
-activeSign.forEach(item => {
-  item.classList.add('hidden');
-})
+// starting conditions in init function
+const init = () => {
+  scores = [0, 0];
+  activePlayer = 0;
+  current = 0;
+  playing = true;
 
-let scores = [0, 0];
-let current = 0;
-let activePlayer = 0;
-let playing = true;
+  totalScore0.textContent = 0;
+  totalScore1.textContent = 0;
+  currentScore0.textContent = 0;
+  currentScore1.textContent = 0;
 
-// switch player
+  showingDice.classList.add('hidden');
+  activeSign.forEach(item => {
+    item.classList.add('hidden');
+  })
+
+  player0.classList.remove('player--winner');
+  player1.classList.remove('player--winner')
+  player0.classList.add('player--active');
+  player1.classList.remove('player--active');
+
+  // display active sign
+  Array.from(activeSign)[activePlayer].classList.remove('hidden');
+}
+
+//calling init function
+init();
+
+// switch player function
 const switchPlayer = () => {
   document.querySelector(`#current--${activePlayer}`).textContent = 0;
   current = 0;
@@ -40,14 +58,12 @@ const switchPlayer = () => {
   player1.classList.toggle('player--active');
 }
 
-//toggle active sign
+//toggle active sign function
 const toggleActiveSign = () => {
   Array.from(activeSign)[activePlayer].classList.toggle('hidden');
 }
-// display active sign
-Array.from(activeSign)[activePlayer].classList.remove('hidden');
 
-//rolling dice functionality
+//rolling the dice
 btnRoll.addEventListener('click', () => {
   if (playing) {
     // generating random number between 1 to 6
@@ -62,20 +78,27 @@ btnRoll.addEventListener('click', () => {
       current += dice;
       document.querySelector(`#current--${activePlayer}`).textContent = current;
     } else {
+      //toggle active sign
       toggleActiveSign();
+      //switch player
       switchPlayer();
+      //toggle active sign
       toggleActiveSign();
     }
   }
 })
-// event listener
+
+// holding tha current value to total value
 btnHold.addEventListener('click', () => {
   if (playing) {
+    //toggle active sign
     toggleActiveSign();
 
+    //holding current score to total score
     scores[activePlayer] += current;
     document.querySelector(`#score--${activePlayer}`).textContent = scores[activePlayer];
 
+    //checking if total score is greater or equal to 100 or not. if true current player will win otherwise switch the player
     if (scores[activePlayer] >= 100) {
       document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
       playing = false;
@@ -84,34 +107,14 @@ btnHold.addEventListener('click', () => {
         document.querySelector(`#current--${activePlayer}`).textContent = 0;
       }
     } else {
+      //switch player
       switchPlayer();
     }
 
+    //toggle active sign
     toggleActiveSign();
   }
 })
 
-btnNew.addEventListener('click', () => {
-  totalScore0.textContent = 0;
-  totalScore1.textContent = 0;
-  showingDice.classList.add('hidden');
-
-  activeSign.forEach(item => {
-    item.classList.add('hidden');
-  })
-
-  document.querySelector(`.player--${activePlayer}`).classList.remove('player--winner');
-  player0.classList.add('player--active');
-  player1.classList.remove('player--active')
-
-  scores = [0, 0];
-  activePlayer = 0;
-  current = 0;
-  playing = true;
-
-  Array.from(activeSign)[activePlayer].classList.remove('hidden');
-
-  document.querySelector(`#score--${activePlayer}`).textContent = scores[activePlayer]
-
-  document.querySelector(`#current--${activePlayer}`).textContent = current;
-})
+// game restart
+btnNew.addEventListener('click', init);
