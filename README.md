@@ -1,2 +1,2 @@
-# pig-game
-site link -> https://tender-mirzakhani-4d610a.netlify.app/
+## website link
+click [here](https://sumanislam.github.io/pig-game/) to see the Live preview of the website
