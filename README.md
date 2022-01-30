@@ -6,7 +6,7 @@ There are two players in this game - **_player1_**, and **_palyer2_**. Both play
 
 <img src="/readmeimage/1.png"/>
 
-<p>The player who will pass the 100 score first will won the match.</p>
+>The player who will pass the 100 score first will won the match.
 
 There are two buttons, one is **_ROLL DICE_** and another is **_HOLD_**. If you click on **_ROLL DICE_** a dice number will appear(between 1 to 6) then you have two options, either you can  click on **_ROLL DICE_** again or click on **_HOLD_** button. If you click on **_ROLL DICE_** your dice number will add to your previous number. Suppose you click on **_ROLL DICE_** and you got **6** and again click on **_ROLL DICE_** and got **4**. So, the total score will be **10**. Now if you hold the score **10** will be added to your current score and Player 2 will be active.
 
