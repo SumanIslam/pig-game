@@ -15,11 +15,3 @@ There are two buttons, one is **_ROLL DICE_** and another is **_HOLD_**. If you 
 <img src="readmeimage/4.png">
 
 >Note: There are two ways that switches players. One is if someone clcks on **_HOLD_** button and another is if someone clicks on **_ROLL DICE_** and got **0**. There is one thing to be notted that if someone got **1** score he will lose his current turn score. For example, one player has 15 marks and he got his turn again and got **4** and **6** by clcking the **_ROLL DICE_**.Then again he clicks on **_ROLL DICE_** and got **0**, now his current **10** marks will not add to previous **15** marks.
-
-
-
-
-
-
-
-you can hold the score by clicking the **_HOLD_** button and the score will add to your current score. You can also Roll the dice again with clicking the **_ROOl DICE_** button<p>
