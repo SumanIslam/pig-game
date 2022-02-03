@@ -17,21 +17,19 @@ body {
   height: 100vh;
   color: #333;
   background-image: linear-gradient(to top left, #7ed56f 0%, #28b485 100%);
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 /* LAYOUT */
-.right-float{
-  float: right;
+.corner {
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 main {
   position: relative;
