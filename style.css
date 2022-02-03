@@ -17,7 +17,9 @@ body {
   height: 100vh;
   color: #333;
   background-image: linear-gradient(to top left, #7ed56f 0%, #28b485 100%);
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* LAYOUT */
@@ -29,14 +31,6 @@ body {
   content: "";
   display: table;
   clear: both;
-}
-
-.container{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 main {
