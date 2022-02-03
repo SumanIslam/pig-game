@@ -12,38 +12,40 @@
 
 <body>
 <!--  How to play documentation link  -->
-  <div class="left-float">
+  <div class="right-float">
     <a href="https://github.com/SumanIslam/pig-game">Playing Rules</a>
   </div>
-  <main>
-    <!-- player 1 -->
-    <section class="player player--0 player--active">
-      <div class="active--sign mb-3"></div>
-      <h2 class="name" id="name--0">Player 1</h2>
-      <p class="score" id="score--0">43</p>
-      <div class="current">
-        <p class="current-label">Current</p>
-        <p class="current-score" id="current--0">0</p>
-      </div>
-    </section>
-    <!-- player 2 -->
-    <section class="player player--1">
-      <div class="active--sign mb-3"></div>
-      <h2 class="name" id="name--1">Player 2</h2>
-      <p class="score" id="score--1">26</p>
-      <div class="current">
-        <p class="current-label">Current</p>
-        <p class="current-score" id="current--1">0</p>
-      </div>
-    </section>
+  <div class="container">
+    <main>
+      <!-- player 1 -->
+      <section class="player player--0 player--active">
+        <div class="active--sign mb-3"></div>
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">43</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <!-- player 2 -->
+      <section class="player player--1">
+        <div class="active--sign mb-3"></div>
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">26</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
 
-    <!-- dice -->
-    <img src="img/dice-5.png" alt="Playing dice" class="dice" />
-    <!-- button -->
-    <button class="btn btn--new">🔄 New game</button>
-    <button class="btn btn--roll">🎲 Roll dice</button>
-    <button class="btn btn--hold">📥 Hold</button>
-  </main>
+      <!-- dice -->
+      <img src="img/dice-5.png" alt="Playing dice" class="dice" />
+      <!-- button -->
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+    </main>
+  </div>
 
   <!-- script -->
   <script src="index.js"></script>
