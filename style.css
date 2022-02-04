@@ -28,13 +28,17 @@ body {
   position: absolute;
   top: 15px;
   right: 15px;
-  background-color: #39c969;
+  background-color: #c7365f;
   padding: 1rem;
 }
 
-.corner a {
+.corner a:link,
+.corner a:active,
+.corner a:hover,
+.corner a:visited {
   text-decoration: none;
   font-size: 1.5rem;
+  color: black;
 }
 
 
