@@ -28,6 +28,13 @@ body {
   position: absolute;
   top: 15px;
   right: 15px;
+  background-color: #39c969;
+  padding: 1rem;
+}
+
+.corner a {
+  text-decoration: none;
+  font-size: 1.5rem;
 }
 
 
